@@ -3,3 +3,10 @@ Just a test to see how easy/hard it is to get Rackspace MaaS to work with openst
 requires:
 python-openstacksdk
 rackspace-sdk-plugin
+
+example connection:
+import user_preference # this isn't a package, so must be ran from the base dir where user_preference.py is.
+from openstack import connection
+pref = user_preference.UserPreference()
+conn = connection.Connection(preference=pref, auth_plugin="rackspace", username="MyRackspaceAcct", api_key="0000000000000000000")
+conn.monitoring_service.find_entity("myentity") # searching for a name doesn't work because the entity filter only allows id..
