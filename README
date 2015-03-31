@@ -1,0 +1,5 @@
+Just a test to see how easy/hard it is to get Rackspace MaaS to work with openstacksdk.
+
+requires:
+python-openstacksdk
+rackspace-sdk-plugin
